@@ -123,11 +123,30 @@ App runs at: `http://localhost:3000`
 
 ## Deployment (Vercel)
 
+### Dashboard Flow
+
 1. Push repo to GitHub.
 2. Import project in Vercel.
 3. Add environment variables from `.env.example` in Vercel Project Settings.
 4. Deploy.
 5. In Supabase Auth settings, add your Vercel URL to allowed redirect URLs.
+
+### CLI Flow
+
+```bash
+npm install
+npm run build
+npx vercel
+npx vercel --prod
+```
+
+A helper script is also available:
+
+```bash
+./scripts/deploy-vercel.sh
+```
+
+This repository includes `vercel.json` for regions, API max duration, and baseline security headers.
 
 ## Create First Admin User
 
